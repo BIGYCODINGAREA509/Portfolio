@@ -102,6 +102,7 @@
       padding: 18px;
       min-height: 100vh;
       overflow-x: hidden;
+
     }
 
     .page {
@@ -111,6 +112,7 @@
       overflow: hidden;
       background: var(--ink-black);
       box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.7);
+      position: relative;
     }
 
     .hero {
@@ -598,6 +600,67 @@
       box-shadow: 0 10px 22px -10px rgba(0, 0, 0, 0.5);
     }
 
+    /* ===== Bwat nwa ki monte lè n rive anba paj la ===== */
+    #infos {
+      position: relative;
+      z-index: 1;
+      background: var(--panel-black);
+      min-height: 60vh;
+      padding: 90px 44px 120px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #infos h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 3.4vw, 2.6rem);
+      margin-bottom: 14px;
+    }
+
+    #infos p {
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    .bwatNwa {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
+      background: #000000;
+      border-radius: 30px 30px 0 0;
+      box-shadow: 0 -15px 45px rgba(0, 0, 0, 0.55);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+      transform: translateY(100%);
+      transition: transform 0.15s linear;
+    }
+
+    .bwatNwa h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .bwatNwa p {
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.6;
+      margin-bottom: 26px;
+    }
+
     @media (max-width:980px) {
       body {
         padding: 12px;
@@ -764,6 +827,636 @@
         animation: none !important;
       }
     }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      position: relative;
+    }
+
+    .imagePwofil {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+
+    }
+
+    .jereImajByen {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      bottom: 0;
+      z-index: 3;
+    }
+
+    .premyeBo {
+      text-align: left;
+      padding-left: 50px;
+    }
+
+    .jereText {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(3rem, 9vw, 2.6rem);
+      font-weight: 900;
+    }
+
+    .jereMiniTeks {
+      font-weight: 700;
+      color: #f08746;
+    }
+
+    .button {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      border: none;
+      background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+      position: relative;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      transition: 0.1s;
+    }
+
+    .button svg {
+      color: white;
+      width: 30px;
+      height: 30px;
+      z-index: 9;
+    }
+
+    .button:nth-child(3) {
+      background: linear-gradient(120deg, #02ff2c, #008a12);
+    }
+
+    .button:nth-child(4) {
+      background: rgb(69, 187, 255);
+    }
+
+    .button:nth-child(5) {
+      background: rgb(255, 33, 33);
+    }
+
+    .button:nth-child(6) {
+      background: black;
+    }
+
+    .button:active {
+      transform: scale(0.85);
+    }
+
+    .button::before {
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      background-color: #212121;
+      border-radius: 50px;
+      z-index: -1;
+      border: 0px solid rgba(255, 255, 255, 0.411);
+      transition: 0.4s;
+    }
+
+    .button:hover::before {
+      width: 0px;
+      height: 0px;
+    }
+
+    .jereIconeYo {
+      display: flex;
+      padding-top: 50px;
+    }
+
+    /* =========================================================
+       RESPONSIVE OVERRIDES + PROJECT IMAGE BEHIND GRADIENT
+       ========================================================= */
+
+    /* Keep the desktop design as it is, but make dimensions fluid. */
+    .page,
+    .hero,
+    .trust-strip,
+    .about,
+    .pwojemYo,
+    #infos {
+      max-width: 100%;
+    }
+
+    .divize {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .jere,
+    .bwatImaj,
+    .hero-body,
+    .hero-text,
+    .container {
+      min-width: 0;
+    }
+
+    /* Hero carousel: responsive without changing the desktop look. */
+    .bwatImaj {
+      position: relative;
+      z-index: 2;
+    }
+
+    .carousel-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+    }
+
+    .carousel-box .carousel-inner,
+    .carousel-box .carousel-item {
+      height: 100%;
+    }
+
+    .carousel-box .carousel-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* ---------------------------------------------------------
+       PROJECT CARDS
+       Image stays BEHIND the gradient card.
+       --------------------------------------------------------- */
+    .pwoje-kolon {
+      position: relative;
+      isolation: isolate;
+      min-height: 340px;
+    }
+
+    .pwoje-kolon .imajPwoje {
+      position: absolute;
+      z-index: 1;
+      left: 10px;
+      right: 10px;
+      top: 55px;
+      width: calc(100% - 20px);
+      height: 230px;
+      margin: 0;
+      object-fit: cover;
+      border-radius: 18px;
+      opacity: 0.9;
+      pointer-events: none;
+      transform: translateY(0) scale(1);
+      transition: opacity .45s ease, transform .45s ease;
+    }
+
+    .pwoje-kolon .chakPwoje {
+      position: relative;
+      z-index: 2;
+      background:
+        linear-gradient(
+          160deg,
+          rgba(255, 145, 66, 0.86) 0%,
+          rgba(232, 73, 47, 0.82) 60%,
+          rgba(122, 31, 26, 0.78) 100%
+        );
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
+    }
+
+    .pwoje-kolon:hover .imajPwoje {
+      opacity: 1;
+      transform: translateY(8px) scale(1.02);
+    }
+
+    /* The card itself remains above the image even when it grows. */
+    .pwoje-kolon .teksYo {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+    }
+
+    /* Better touch behavior for the horizontal project strip. */
+    .bwatYo {
+      touch-action: pan-x;
+      overscroll-behavior-x: contain;
+    }
+
+    /* Prevent long project names/text from forcing the card wider. */
+    .gwoTeksAnndan,
+    .deskripsyon {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
+    @media (max-width: 980px) {
+      body {
+        padding: 12px;
+      }
+
+      .hero {
+        height: auto;
+        min-height: 400px;
+        padding: 26px 24px 24px;
+      }
+
+      .divize {
+        flex-direction: column;
+      }
+
+      .jere {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .hero-body {
+        width: 100%;
+      }
+
+      .hero-text {
+        max-width: 75%;
+      }
+
+      .bwatImaj {
+        width: 100%;
+        height: auto;
+        margin: 24px 0 0;
+      }
+
+      .bwatImaj .container {
+        max-width: 100%;
+      }
+
+      .figure-wrap {
+        max-width: 45vw;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .about-right p.lead {
+        margin-bottom: 36px;
+      }
+
+      .pwoje-kolon {
+        width: min(46%, 430px);
+      }
+    }
+
+    /* =========================================================
+       SMALL TABLET / LARGE PHONE
+       ========================================================= */
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .figure-wrap {
+        width: 260px;
+        max-width: 48vw;
+        right: -10px;
+        opacity: 0.22;
+      }
+
+      .side-note {
+        display: none;
+      }
+
+      .stat-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .trust-strip {
+        align-items: flex-start;
+      }
+
+      .brand-list {
+        gap: 18px 28px;
+      }
+
+      .jereIconeYo {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .premyeBo {
+        min-width: 0;
+      }
+    }
+
+    /* =========================================================
+       PHONE
+       ========================================================= */
+    @media (max-width: 680px) {
+      body {
+        padding: 6px;
+      }
+
+      .page {
+        border-radius: 20px;
+      }
+
+      .hero {
+        padding: 16px 14px 22px;
+        min-height: 0;
+        border-radius: 20px;
+      }
+
+      nav {
+        gap: 10px;
+        align-items: center;
+      }
+
+      .logoA {
+        height: 32px;
+        width: auto;
+      }
+
+      .cta-pill {
+        max-width: 170px;
+        padding: 7px 7px 7px 12px;
+        font-size: 0.7rem;
+        gap: 6px;
+      }
+
+      .cta-pill .arrow-circle {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+      }
+
+      .hero-text {
+        padding-top: 24px;
+        padding-bottom: 12px;
+      }
+
+      .eyebrow {
+        font-size: 0.85rem;
+      }
+
+      .headline {
+        font-size: clamp(2.25rem, 13vw, 3.5rem);
+        line-height: 0.95;
+      }
+
+      .figure-wrap {
+        width: 210px;
+        max-width: 55vw;
+        right: -25px;
+        opacity: 0.16;
+      }
+
+      .stat-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 8px;
+        padding-bottom: 4px;
+      }
+
+      .stat-row .stat {
+        font-size: 0.57rem;
+        min-width: 0;
+      }
+
+      .stat-row .stat span.num {
+        width: fit-content;
+        max-width: 100%;
+        font-size: 0.56rem;
+        white-space: normal;
+      }
+
+      .bwatImaj {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .carousel-box {
+        border-radius: 18px;
+        aspect-ratio: 16 / 10;
+      }
+
+      .trust-strip {
+        padding: 24px 16px;
+        gap: 18px;
+      }
+
+      .trust-label {
+        max-width: 100%;
+      }
+
+      .brand-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 12px;
+      }
+
+      .brand-item {
+        font-size: 0.82rem;
+        min-width: 0;
+      }
+
+      .about {
+        padding: 48px 16px 56px;
+        gap: 28px;
+      }
+
+      .about h2 {
+        font-size: clamp(1.9rem, 9vw, 2.5rem);
+      }
+
+      .about-right p.lead {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+      }
+
+      .about-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .pwojemYo {
+        padding: 42px 14px;
+      }
+
+      .antetPwoje {
+        font-size: clamp(42px, 20vw, 100px);
+        top: 4px;
+      }
+
+      .bwatYo {
+        gap: 14px;
+        padding-bottom: 12px;
+        scroll-padding-left: 0;
+      }
+
+      .pwoje-kolon {
+        width: calc(100vw - 52px);
+        min-width: calc(100vw - 52px);
+        min-height: 300px;
+      }
+
+      .pwoje-kolon .chakPwoje {
+        min-height: 260px;
+        height: auto;
+        padding: 24px 16px;
+        background:
+          linear-gradient(
+            160deg,
+            rgba(255, 145, 66, 0.80) 0%,
+            rgba(232, 73, 47, 0.76) 60%,
+            rgba(122, 31, 26, 0.72) 100%
+          );
+          object-fit: cover;
+      }
+
+      .pwoje-kolon .imajPwoje {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: calc(100% - 16px);
+        height: 210px;
+        opacity: 0.92;
+        
+      }
+
+      .gwoTeksAnndan {
+        font-size: clamp(27px, 9vw, 36px);
+      }
+
+      .deskripsyon {
+        font-size: 11.5px;
+      }
+
+      /* On phones, don't depend on hover: project information is always visible. */
+      .chakPwoje .deskripsyon,
+      .chakPwoje .boutonYo {
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+      }
+
+      .chakPwoje .deskripsyon {
+        margin: 8px 0;
+      }
+
+      .chakPwoje .boutonYo {
+        margin-top: 8px;
+      }
+
+      .pwoje-kolon:hover .chakPwoje {
+        height: auto;
+      }
+
+      .pwoje-kolon:hover .imajPwoje {
+        transform: translateY(5px) scale(1.01);
+      }
+
+      #infos {
+        min-height: auto;
+        padding: 56px 16px 70px;
+      }
+
+      #infos .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .jereImajByen {
+        width: min(220px, 65vw);
+        height: min(220px, 65vw);
+      }
+
+      .premyeBo {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .jereText {
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
+        line-height: 1.05;
+        overflow-wrap: anywhere;
+      }
+
+      .premyeBo p {
+        font-size: 0.84rem;
+        line-height: 1.7;
+        text-align: left;
+      }
+
+      .jereIconeYo {
+        width: 100%;
+        padding-top: 26px;
+        gap: 8px;
+      }
+
+      .button {
+        width: 44px;
+        height: 44px;
+        margin-left: 0;
+      }
+
+      .button::before {
+        width: 49px;
+        height: 49px;
+      }
+    }
+
+    /* =========================================================
+       VERY SMALL PHONES
+       ========================================================= */
+    @media (max-width: 400px) {
+      .cta-pill {
+        max-width: 145px;
+        font-size: 0.62rem;
+      }
+
+      .stat-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .brand-list {
+        grid-template-columns: 1fr;
+      }
+
+      .pwoje-kolon {
+        width: calc(100vw - 42px);
+        min-width: calc(100vw - 42px);
+      }
+
+      .pwoje-kolon .chakPwoje {
+        min-height: 280px;
+      }
+
+      .premyeBo p {
+        font-size: 0.78rem;
+      }
+    }
+
   </style>
 </head>
 
@@ -780,6 +1473,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#infos">Informations</a></li>
         </ul>
         <button class="cta-pill" id="heroCta">
           CONTACT US
@@ -802,13 +1496,16 @@
             </div>
           </div>
 
+
           <div class="stat-row">
+
             <div class="stat"><span class="num">1 - DESIGNS</span> UI/UX, Logo, Flyer, Etc...</div>
             <div class="stat"><span class="num">2 - DEVELOPMENT</span>Web, VBA, Flutter(Dart)</div>
             <div class="stat"><span class="num">3 - DATABASE</span>Access, Excel, SQL, Etc...</div>
             <div class="stat"><span class="num">4 - LANGUAGES</span>Creole, French, English</div>
           </div>
         </div>
+
 
         <div class="bwatImaj">
           <div class="container">
@@ -828,6 +1525,7 @@
                 </div>
               </div>
 
+
               <button class="carousel-control-prev" type="button" data-bs-target="#monCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Précédent</span>
@@ -841,6 +1539,7 @@
           </div>
         </div>
       </div>
+
     </section>
 
     <section class="trust-strip">
@@ -894,6 +1593,10 @@
           </a>
         </div>
       </div>
+
+
+
+
     </section>
 
     <section class="projects" id="projects">
@@ -968,6 +1671,86 @@
       </div>
     </section>
 
+    <section id="infos">
+      <div class="container">
+        <div class="dezyemBo">
+
+          <div class="jereImajByen">
+            <img src="images/alexis_djousson.png" alt="Alexis Djousson" class="imagePwofil">
+          </div>
+        </div>
+
+        <div class="premyeBo">
+          <div class="jereText">INFORMATIONS PERSONNELLES</div>
+          <p>
+            <span class="jereMiniTeks">Nom:</span> Alexis Djousson<br>
+            <span class="jereMiniTeks">Date de naissance:</span> 23/09/2005<br>
+            <span class="jereMiniTeks">Lieu de naissance:</span> Port-au-Prince, Haïti<br>
+            <span class="jereMiniTeks">Adresse:</span> Limonade, Haïti<br>
+            <span class="jereMiniTeks">Téléphone:</span> +509 55 67 9002<br>
+            <span class="jereMiniTeks">Email:</span> alexisbigy509@gmail.com<br>
+            <span class="jereMiniTeks">Métier:</span> Développeur Full Stack, Designer Graphique, Développeur
+            d'Applications<br>
+            <span class="jereMiniTeks">Projets réalisés:</span> VANDA, VANDAPAY, EXTRAGENCY, AGRITECH, KomS, GameBox -
+            VBA, etc...<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="jereIconeYo">
+        <button class="button">
+          <svg viewBox="0 0 24 24" fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white">
+            <path clip-rule="evenodd"
+              d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+              fill-rule="evenodd" fill="currentColor"></path>
+          </svg>
+        </button>
+        <button class="button">
+          <svg viewBox="0 0 24 24" fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white">
+            <path clip-rule="evenodd"
+              d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+              fill-rule="evenodd" fill="currentColor"></path>
+            <path
+              d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+              fill="currentColor"></path>
+          </svg>
+        </button>
+
+        <button class="button">
+          <svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white">
+            <path clip-rule="evenodd"
+              d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+
+        <button class="button">
+          <svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white">
+            <path clip-rule="evenodd"
+              d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+
+        <button class="button">
+          <svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white">
+            <path clip-rule="evenodd"
+              d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+              fill-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+
+  </div>
+
+
+  </section>
+
   </div>
 
   <script src="bootstrap.bundle.min.js"></script>
@@ -983,6 +1766,13 @@
     document.getElementById('heroCta').addEventListener('click', () => {
       louvriWhatsApp("Bonjou Alexis, mwen ta renmen kontakte w pou yon pwojè.");
     });
+
+    const finalCta = document.getElementById('finalCta');
+    if (finalCta) {
+      finalCta.addEventListener('click', () => {
+        louvriWhatsApp("Bonjou Alexis, mwen rive nan fen paj la e mwen enterese pale ak ou.");
+      });
+    }
 
     function achtePwodwi(nonPwodwi) {
       louvriWhatsApp(`Bonjou, mwen enterese achte ${nonPwodwi}. Ban m plis enfòmasyon souple.`);
@@ -1045,6 +1835,35 @@
         io.observe(about);
       }
     }
+
+    /* ===== Bwat nwa ki monte lè n ap rive anba paj la toupre pati projects la epi li dwe responsive ===== */
+    //fe bwat nwa monte pi wo toujou lè w ap desann paj la, epi li desann lè w ap monte paj la
+    const bwatNwa = document.getElementById('bwatNwa');
+    const infosSection = document.getElementById('infos');
+
+    function jereBwatNwa() {
+      if (!bwatNwa || !infosSection) return;
+
+      const rect = infosSection.getBoundingClientRect();
+      const wHeight = window.innerHeight;
+
+      // distans ki rete anvan seksyon infos rive nan tèt ekran an
+      const distans = rect.top;
+
+      // lè seksyon an kòmanse antre nan ekran an, nou fè bwat nwa a monte
+      if (distans < wHeight) {
+        let pousantaj = 1 - (distans / wHeight);
+        pousantaj = Math.min(Math.max(pousantaj, 0), 1);
+        bwatNwa.style.transform = `translateY(${(1 - pousantaj) * 100}%)`;
+      } else {
+        bwatNwa.style.transform = 'translateY(100%)';
+      }
+    }
+
+
+    window.addEventListener('scroll', jereBwatNwa, { passive: true });
+    window.addEventListener('resize', jereBwatNwa);
+    jereBwatNwa();
   </script>
 
 </body>
