@@ -4,10 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexis Djousson — Official</title>
+
+  <!-- Google / SEO -->
+  <title>Alexis Djousson — Official Portfolio</title>
+  <meta name="description" content="Alexis Djousson — VBA Developer, Flutter Developer, Full Stack Developer, UI/UX Designer and Graphic Designer.">
+  <meta name="author" content="Alexis Djousson">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bigycodingarea509.github.io/">
+
+  <!-- Favicon: logo shown next to the site name in search/browser -->
+  <link rel="icon" type="image/png" sizes="512x512" href="images/Logo.png">
+  <link rel="apple-touch-icon" href="images/Logo.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alexis Djousson — Official Portfolio">
+  <meta property="og:description" content="Official portfolio of Alexis Djousson — Developer, UI/UX Designer and Graphic Designer.">
+  <meta property="og:url" content="https://bigycodingarea509.github.io/">
+  <meta property="og:site_name" content="Alexis Djousson">
+  <meta property="og:image" content="https://bigycodingarea509.github.io/images/Logo.png">
+
+  <!-- Tell search engines the preferred site name -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Alexis Djousson",
+    "alternateName": "Alexis Djousson — Official Portfolio",
+    "url": "https://bigycodingarea509.github.io/"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="icon" href="images/Logo.png"
   <style>
     .carousel-box {
       width: 100%;
@@ -834,8 +863,12 @@
 
   </div>
 
-  <script src="bootstrap.bundle.min.js">
-    // Simple, honest interactions: both CTAs open a mailto composer.
+  <!-- Bootstrap JavaScript -->
+  <script src="bootstrap.bundle.min.js"></script>
+
+  <!-- Your JavaScript -->
+  <script>
+    // Both CTAs open a mail composer.
     document.querySelectorAll('#heroCta, #aboutCta').forEach(btn => {
       btn.addEventListener('click', () => {
         window.location.href = 'mailto:hello@folioblox.com?subject=Let%27s%20work%20together';
@@ -844,21 +877,27 @@
 
     // Subtle reveal-on-scroll for the about section (respects reduced motion)
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     if (!prefersReduced && 'IntersectionObserver' in window) {
       const about = document.querySelector('.about');
-      about.style.opacity = 0;
-      about.style.transform = 'translateY(24px)';
-      about.style.transition = 'opacity .7s ease, transform .7s ease';
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            about.style.opacity = 1;
-            about.style.transform = 'translateY(0)';
-            io.disconnect();
-          }
-        });
-      }, { threshold: 0.2 });
-      io.observe(about);
+
+      if (about) {
+        about.style.opacity = 0;
+        about.style.transform = 'translateY(24px)';
+        about.style.transition = 'opacity .7s ease, transform .7s ease';
+
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              about.style.opacity = 1;
+              about.style.transform = 'translateY(0)';
+              io.disconnect();
+            }
+          });
+        }, { threshold: 0.2 });
+
+        io.observe(about);
+      }
     }
   </script>
 
