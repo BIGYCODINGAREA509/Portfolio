@@ -5,26 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google / SEO -->
   <title>Alexis Djousson — Official Portfolio</title>
-  <meta name="description" content="Alexis Djousson — VBA Developer, Flutter Developer, Full Stack Developer, UI/UX Designer and Graphic Designer.">
+  <meta name="description"
+    content="Alexis Djousson — VBA Developer, Flutter Developer, Full Stack Developer, UI/UX Designer and Graphic Designer.">
   <meta name="author" content="Alexis Djousson">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://bigycodingarea509.github.io/">
 
-  <!-- Favicon: logo shown next to the site name in search/browser -->
   <link rel="icon" type="image/png" sizes="512x512" href="images/Logo.png">
   <link rel="apple-touch-icon" href="images/Logo.png">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Alexis Djousson — Official Portfolio">
-  <meta property="og:description" content="Official portfolio of Alexis Djousson — Developer, UI/UX Designer and Graphic Designer.">
+  <meta property="og:description"
+    content="Official portfolio of Alexis Djousson — Developer, UI/UX Designer and Graphic Designer.">
   <meta property="og:url" content="https://bigycodingarea509.github.io/">
   <meta property="og:site_name" content="Alexis Djousson">
   <meta property="og:image" content="https://bigycodingarea509.github.io/images/Logo.png">
 
-  <!-- Tell search engines the preferred site name -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,14 +54,12 @@
       align-items: center;
     }
 
-    @media(width>768px) {
+    @media (min-width: 769px) {
       .carousel-item img {
         object-fit: contain;
       }
-
     }
 
-    /* Bouton yo */
     .carousel-control-prev,
     .carousel-control-next {
       width: 15%;
@@ -105,6 +101,7 @@
       color: var(--cream);
       padding: 18px;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     .page {
@@ -116,7 +113,6 @@
       box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.7);
     }
 
-    /* ---------- HERO ---------- */
     .hero {
       position: relative;
       background:
@@ -201,7 +197,6 @@
 
     .hero-body {
       position: relative;
-      /* min-height:520px; */
       display: flex;
       align-items: flex-end;
     }
@@ -219,7 +214,6 @@
     .hero-text {
       position: relative;
       z-index: 4;
-      /* padding:56px 0 46px; */
       padding-top: 40px;
       max-width: 640px;
       font-family: 'Poppins';
@@ -273,7 +267,6 @@
       padding-bottom: 20px;
       max-width: 600px;
       font-family: 'Poppins';
-
     }
 
     .stat-row .stat span.num {
@@ -300,7 +293,6 @@
       width: fit-content;
     }
 
-    /* ---------- LOGO / TRUST STRIP ---------- */
     .trust-strip {
       background: var(--panel-black);
       display: flex;
@@ -340,7 +332,6 @@
       opacity: 0.9;
     }
 
-    /* ---------- ABOUT / SIGNATURE SECTION ---------- */
     .about {
       background: var(--panel-black);
       padding: 90px 44px 100px;
@@ -405,13 +396,245 @@
       stroke: #e8492f;
     }
 
-    /* Font */
     @font-face {
       font-family: 'Poppins';
       src: url('/fonts/Poppins-Bold.ttf');
     }
 
-    /* ---------- RESPONSIVE ---------- */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--ember-1);
+      outline-offset: 3px;
+    }
+
+    .logoA {
+      height: 40px;
+    }
+
+    .divize {
+      display: flex;
+    }
+
+    .bwatImaj {
+      border-radius: 30px;
+      width: 100%;
+      height: 290px;
+      margin-top: 15px;
+    }
+
+    .jere {
+      margin-right: 5%;
+      width: 105%;
+      height: 100%;
+    }
+
+    .pwojemYo {
+      width: 100%;
+      background-color: #463126;
+      padding: 70px 44px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .antetPwoje {
+      font-size: clamp(60px, 12vw, 210px);
+      font-weight: 200;
+      color: #f08746;
+      opacity: 0.1;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .bwatYo {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      gap: 24px;
+      align-items: start;
+      scroll-behavior: smooth;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 8px;
+      cursor: grab;
+      user-select: none;
+    }
+
+    .bwatYo:active {
+      cursor: grabbing;
+    }
+
+    .bwatYo::-webkit-scrollbar {
+      display: none;
+    }
+
+    .bwatYo>* {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+    }
+
+    .pwoje-kolon {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+    }
+
+    .chakPwoje {
+      height: 250px;
+      width: 100%;
+      background: linear-gradient(160deg, #ff9142 0%, #e8492f 60%, #7a1f1a 100%);
+      border-radius: 20px;
+      transition: height 0.45s ease, box-shadow 0.3s ease;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      padding: 18px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .teksYo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .gwoTeksAnndan {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      font-size: 36px;
+      letter-spacing: 0.02em;
+    }
+
+    .deskripsyon {
+      font-size: 12.5px;
+      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.92);
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
+    }
+
+    .boutonYo {
+      display: flex;
+      gap: 8px;
+      margin-top: 0;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.4s ease, max-height 0.4s ease, margin 0.4s ease;
+    }
+
+    .chakPwoje:hover {
+      height: 340px;
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.65);
+    }
+
+    .chakPwoje:hover .deskripsyon {
+      max-height: 120px;
+      opacity: 1;
+      margin: 6px 0;
+    }
+
+    .chakPwoje:hover .boutonYo {
+      opacity: 1;
+      max-height: 60px;
+      margin-top: 6px;
+    }
+
+    .achte,
+    .utilisation {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      padding: 7px 14px;
+      border: none;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .achte:hover,
+    .utilisation:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .utilisation {
+      background: var(--cream);
+      color: #2a1712;
+    }
+
+    .achte {
+      background: #1a1a1a;
+      color: var(--cream);
+    }
+
+    .imajPwoje {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-top: 14px;
+      box-shadow: 0 10px 22px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width:980px) {
+      body {
+        padding: 12px;
+      }
+
+      .hero {
+        height: auto;
+        padding: 26px 24px 0;
+      }
+
+      .divize {
+        flex-direction: column;
+      }
+
+      .jere,
+      .bwatImaj {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .bwatImaj {
+        margin-top: 18px;
+        max-width: 100%;
+      }
+
+      .figure-wrap {
+        opacity: 0.3;
+        width: 300px;
+        right: 0;
+      }
+
+      .stat-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 100%;
+      }
+    }
+
     @media (max-width:860px) {
       .nav-links {
         display: none;
@@ -447,205 +670,99 @@
       }
     }
 
+    @media(max-width:768px) {
+      .bwatImaj {
+        display: none;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .pwoje-kolon {
+        width: 46%;
+      }
+    }
+
+    @media (max-width: 680px) {
+      body {
+        padding: 10px;
+      }
+
+      .hero {
+        padding: 18px 18px 0;
+      }
+
+      nav {
+        align-items: flex-start;
+      }
+
+      .logoA {
+        height: 34px;
+      }
+
+      .cta-pill {
+        padding: 8px 8px 8px 14px;
+        font-size: 0.76rem;
+      }
+
+      .hero-text {
+        padding-top: 22px;
+        padding-bottom: 18px;
+      }
+
+      .headline {
+        font-size: clamp(2.4rem, 12vw, 3.5rem);
+      }
+
+      .stat-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .trust-strip {
+        padding: 26px 18px;
+      }
+
+      .about {
+        padding: 52px 18px 60px;
+      }
+
+      .pwojemYo {
+        padding: 48px 18px;
+      }
+
+      .antetPwoje {
+        font-size: clamp(44px, 22vw, 120px);
+      }
+
+      .pwoje-kolon {
+        width: 84vw;
+        min-width: 250px;
+      }
+
+      .chakPwoje {
+        height: auto;
+        min-height: 210px;
+        padding: 22px 18px;
+      }
+
+      .deskripsyon,
+      .boutonYo {
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        margin: 8px 0;
+      }
+
+      .chakPwoje:hover {
+        height: auto;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       * {
         transition: none !important;
         animation: none !important;
       }
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 2px solid var(--ember-1);
-      outline-offset: 3px;
-    }
-
-    .logoA {
-      height: 40px;
-    }
-
-    .divize {
-      display: flex;
-    }
-
-    .bwatImaj {
-      border-radius: 30px;
-      width: 100%;
-      height: 290px;
-      margin-top: 15px;
-
-    }
-
-    .jere {
-      margin-right: 5%;
-      width: 105%;
-      height: 100%;
-    }
-
-    @media(max-width:768px) {
-      .bwatImaj {
-        display: none;
-      }
-
-    }
-
-    .pwojemYo {
-      height: 400px;
-      width: 100%;
-      background-color: #463126;
-      padding: 50px;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      display: flex;
-      position: relative;
-    }
-
-    .pwojemYo:hover {
-      .antetPwoje {
-        color: #ab5927;
-        filter: blur(15px);
-      }
-    }
-
-    .antetPwoje {
-      font-size: clamp(210px, 8cqw, 30px);
-      font-weight: 200;
-      color: #f08746;
-      filter: opacity(10%);
-      transition: 1s ease-in-out;
-      position: absolute;
-      top: 0;
-    }
-
-    /* .jereimaj{
-      border-radius: 30px;
-      object-fit: fill;
-      object-position: center;
-      max-width: 100%;
-      max-height:  100%;
-    } */
-    .bwatYo {
-      height: 300px;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.313);
-      border-radius: 30px;
-      backdrop-filter: blur(25px);
-      box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      padding: 30px;
-    }
-
-    .chakPwoje {
-      height: 250px;
-      width: 250px;
-      background-color: rgb(255, 111, 0);
-      border-radius: 20px;
-      transition: width 0.5s ease;
-      
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      font-size: 20px;
-      padding: 5px;
-    }
-
-    .deskripsyon {
-      display: inline;
-      transition: opacity 2s ease;
-    }
-
-    /* le souri a pase sou yon seul bwat */
-    .chakPwoje:hover {
-      width: 200%;
-      display: flex;
-      justify-content: center;
-
-      .deskripsyon {
-        display: inline;
-        font-size: 10px;
-      }
-
-      .teksYo{
-        filter: opacity(0%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 200%;
-        height: 100%;
-      }
-
-      .teksYo:hover{
-        filter: opacity(100%);
-        display: flex;
-        flex-direction: column;
-        transition: filter 1.5s ease-out;
-      }
-
-      .gwoTeksAnndan {
-        font-size: 50px;
-      }
-
-      .imajEnt {
-        display: flex;
-        height: 70px;
-        width: 70px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 10px;
-      }
-
-      .achte {
-        display: inline-block;
-        border-radius: 50px;
-        width: 120px;
-        height: 30px;
-        border: none;
-        font-size: 10px;
-      }
-
-      .utilisation {
-        display: inline-block;
-        border-radius: 50px;
-        width: 120px;
-        height: 30px;
-        border: none;
-        font-size: 10px;
-      }
-
-    }
-
-    .teksYo {
-      transition: opacity 3s ease;
-    }
-
-    @media(max-width:768px) {
-      /* responsive la */
-
-    }
-
-    .imajEntefasYo {
-      display: flex;
-      gap: 5px;
-      margin: 10px;
-    }
-
-    .deskripsyon {
-      display: none;
-    }
-    .imajEnt {
-      display: none;
-    }
-
-    .achte {
-      display: none;
-    }
-
-    .utilisation {
-      display: none;
     }
   </style>
 </head>
@@ -654,11 +771,9 @@
 
   <div class="page">
 
-    <!-- ============ HERO ============ -->
     <section class="hero">
       <nav>
         <div class="logo">
-
           <img src="images/Logo.png" alt="" class="logoA">
         </div>
         <ul class="nav-links">
@@ -693,76 +808,41 @@
             <div class="stat"><span class="num">3 - DATABASE</span>Access, Excel, SQL, Etc...</div>
             <div class="stat"><span class="num">4 - LANGUAGES</span>Creole, French, English</div>
           </div>
-
-
-
         </div>
 
         <div class="bwatImaj">
-
           <div class="container">
-
             <div id="monCarousel" class="carousel slide carousel-box" data-bs-ride="carousel" data-bs-interval="3000">
-
-              <!-- IMAGES -->
               <div class="carousel-inner">
-
-                <!-- Première image -->
                 <div class="carousel-item active">
                   <img src="images/image1.JPG" alt="Image 1">
                 </div>
-
-
-                <!-- Deuxième image -->
                 <div class="carousel-item">
                   <img src="images/image2.JPG" alt="Image 2">
                 </div>
-
-                <!-- Troisième image -->
                 <div class="carousel-item">
                   <img src="images/image3.JPG" alt="Image 3">
                 </div>
-
-                <!-- Quatrieme image -->
                 <div class="carousel-item">
-                  <img src="images/image4.JPG" alt="Image 3">
+                  <img src="images/image4.JPG" alt="Image 4">
                 </div>
-
               </div>
 
-
-              <!-- BOUTON PRÉCÉDENT -->
               <button class="carousel-control-prev" type="button" data-bs-target="#monCarousel" data-bs-slide="prev">
-
-                <span class="carousel-control-prev-icon" aria-hidden="true">
-                </span>
-
-                <span class="visually-hidden">
-                  Précédent
-                </span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
               </button>
 
-
-              <!-- BOUTON SUIVANT -->
               <button class="carousel-control-next" type="button" data-bs-target="#monCarousel" data-bs-slide="next">
-
-                <span class="carousel-control-next-icon" aria-hidden="true">
-                </span>
-
-                <span class="visually-hidden">
-                  Suivant
-                </span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
               </button>
-
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ============ TRUST STRIP ============ -->
     <section class="trust-strip">
       <div class="trust-label">Empowered by world class skills. </div>
       <div class="brand-list">
@@ -796,7 +876,6 @@
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
     <section class="about" id="about">
       <div>
         <span class="about-eyebrow">Discover Why You Can Trust Us.</span>
@@ -807,75 +886,142 @@
           I build perfect websites, I do applications for Android, iOs, Windows, with professionnal UI/UX. </p>
         <div class="about-footer">
           <p>Let's See my<br>Curriculum Vitae</p>
-
-          <a href="CV Alexis Djousson.pdf" download class="">
+          <a href="CV Alexis Djousson.pdf" download>
             <button class="cta-pill dark-cta" id="aboutCta">
               Download my CV
-              <span class="arrow-circle">
-
-                <!-- Download cv -->
-                📜
-              </span>
+              <span class="arrow-circle">📜</span>
             </button>
           </a>
         </div>
-
       </div>
     </section>
 
-
     <section class="projects" id="projects">
       <div class="pwojemYo">
-        <div class="antetPwoje">
-          PROJECTS
-        </div>
+        <div class="antetPwoje">PROJECTS</div>
         <div class="bwatYo">
-          <div class="chakPwoje">
-            <div class="teksYo">
-              <div class="gwoTeksAnndan">VANDA</div>
-              <div class="deskripsyon">Application de gestion d'entreprise Professionnel.</div>
-              <div class="imajEntefasYo">
-                <div class="imajEnt"></div>
-                <div class="imajEnt"></div>
-                <div class="imajEnt"></div>
-                <div class="imajEnt"></div>
 
-              </div>
-              <div class="boutonYo">
-                <button class="utilisation"> Documentation</button>
-                <button class="achte"> Acheter VANDA</button>
+          <div class="pwoje-kolon">
+            <div class="chakPwoje">
+              <div class="teksYo">
+                <div class="gwoTeksAnndan">VANDA</div>
+                <div class="deskripsyon">Application de Gestion d'Entreprise de Vente. L'application permet de gérer
+                  efficacement les produits, les stocks, les ventes, les clients, les fournisseurs et les finances,
+                  tout en offrant une vue claire sur les performances de l'entreprise.</div>
+                <div class="boutonYo">
+                  <a class="utilisation" href="doc1.pdf" download="Documentation-VANDA.pdf">Documentation</a>
+                  <button class="achte" onclick="achtePwodwi('VANDA')">Acheter VANDA</button>
+                </div>
               </div>
             </div>
+            <img class="imajPwoje" src="images/imageProjet1.jpg" alt="Vanda - Application de gestion d'entreprise">
           </div>
-          <div class="chakPwoje">
+
+          <div class="pwoje-kolon">
+            <div class="chakPwoje">
+              <div class="teksYo">
+                <div class="gwoTeksAnndan">VANDAPAY</div>
+                <div class="deskripsyon">Plateforme de sol en ligne. Elle permet de réunir plusieurs groupes de
+                  personnes autour d'un objectif commun afin de contribuer leur moyens ensemble, de manière simple,
+                  organisée et d'aboutir a un resultat.</div>
+                <div class="boutonYo">
+                  <a class="utilisation" href="doc2.pdf" download="Documentation-VANDAPAY.pdf">Documentation</a>
+                  <button class="achte" onclick="achtePwodwi('VANDAPAY')">Acheter VandaPay</button>
+                </div>
+              </div>
+            </div>
+            <img class="imajPwoje" src="images/imageProjet2.jpeg" alt="VandaPay - Platfòm sòl an liy">
           </div>
-          <div class="chakPwoje">
+
+          <div class="pwoje-kolon">
+            <div class="chakPwoje">
+              <div class="teksYo">
+                <div class="gwoTeksAnndan">EXTRAGENCY</div>
+                <div class="deskripsyon">Application scolaire moderne conçue pour faciliter la gestion et
+                  l'organisation des activités d'un établissement scolaire, centralisant les informations scolaires,
+                  administratives et financières.</div>
+                <div class="boutonYo">
+                  <a class="utilisation" href="doc3.pdf" download="Documentation-EXTRAGENCY.pdf">Documentation</a>
+                  <button class="achte" onclick="achtePwodwi('EXTRAGENCY')">Acheter Extragency</button>
+                </div>
+              </div>
+            </div>
+            <img class="imajPwoje" src="images/imageProjet3.jpeg" alt="Extragency - App de gestion scolaire">
           </div>
-          <div class="chakPwoje">
+
+          <div class="pwoje-kolon">
+            <div class="chakPwoje">
+              <div class="teksYo">
+                <div class="gwoTeksAnndan">AGRITECH</div>
+                <div class="deskripsyon">Plateforme de vente de produits locaux en ligne. Elle connecte les
+                  agriculteurs directement aux consommateurs pour faciliter l'achat de produits frais et locaux.</div>
+                <div class="boutonYo">
+                  <a class="utilisation" href="doc4.pdf" download="Documentation-AGRITECH.pdf">Documentation</a>
+                  <button class="achte" onclick="achtePwodwi('AGRITECH')">Acheter Agritech</button>
+                </div>
+              </div>
+            </div>
+            <img class="imajPwoje" src="images/imageProjet4.jpeg" alt="Agritech - Platfòm vant pwodwi lokal">
           </div>
 
         </div>
-
-
-
       </div>
     </section>
 
   </div>
 
-  <!-- Bootstrap JavaScript -->
   <script src="bootstrap.bundle.min.js"></script>
 
-  <!-- Your JavaScript -->
   <script>
-    // Both CTAs open a mail composer.
-    document.querySelectorAll('#heroCta, #aboutCta').forEach(btn => {
-      btn.addEventListener('click', () => {
-        window.location.href = 'mailto:hello@folioblox.com?subject=Let%27s%20work%20together';
-      });
+    const MWEN_NIMEWO = '50955679002';
+
+    function louvriWhatsApp(mesaj) {
+      const mesajEncode = encodeURIComponent(mesaj);
+      window.open(`https://wa.me/${MWEN_NIMEWO}?text=${mesajEncode}`, '_blank');
+    }
+
+    document.getElementById('heroCta').addEventListener('click', () => {
+      louvriWhatsApp("Bonjou Alexis, mwen ta renmen kontakte w pou yon pwojè.");
     });
 
-    // Subtle reveal-on-scroll for the about section (respects reduced motion)
+    function achtePwodwi(nonPwodwi) {
+      louvriWhatsApp(`Bonjou, mwen enterese achte ${nonPwodwi}. Ban m plis enfòmasyon souple.`);
+    }
+
+    const bwatYo = document.querySelector('.bwatYo');
+    let autoSlideInterval;
+    let resumeTimeout;
+
+    function glisePwochenn() {
+      if (!bwatYo || !bwatYo.children.length) return;
+      const kat = bwatYo.children[0];
+      const pa = kat.offsetWidth + 24;
+      const maxScroll = bwatYo.scrollWidth - bwatYo.clientWidth;
+
+      if (bwatYo.scrollLeft >= maxScroll - 5) {
+        bwatYo.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        bwatYo.scrollBy({ left: pa, behavior: 'smooth' });
+      }
+    }
+
+    function komanseAutoSlide() {
+      autoSlideInterval = setInterval(glisePwochenn, 3800);
+    }
+
+    function kanpeAutoSlide() {
+      clearInterval(autoSlideInterval);
+      clearTimeout(resumeTimeout);
+      resumeTimeout = setTimeout(komanseAutoSlide, 7000);
+    }
+
+    if (bwatYo) {
+      komanseAutoSlide();
+      bwatYo.addEventListener('touchstart', kanpeAutoSlide, { passive: true });
+      bwatYo.addEventListener('mousedown', kanpeAutoSlide);
+      bwatYo.addEventListener('wheel', kanpeAutoSlide, { passive: true });
+    }
+
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!prefersReduced && 'IntersectionObserver' in window) {
